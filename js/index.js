@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyDOw0xn3eAeJUQElU7M9hFi_M68D5xEtic';
+const API_KEY = 'AIzaSyAfgONTHK5ycmxmPzJq9zrOggY8qROeut4';
 const VIDEOS_URL = 'https://www.googleapis.com/youtube/v3/videos';
 const SEARCH_URL = 'GET https://www.googleapis.com/youtube/v3/search';
 
@@ -199,8 +199,8 @@ const displayVideo = ({ items: [video] }) => {
 		}
 	
 
-		fetchTrendingVideos().then(displayVideo);
-		fetchFavoriteVideos().then(displayVideo);
+		fetchTrendingVideos().then(displayListVideo);
+		fetchFavoriteVideos().then(displayListVideo);
 		fetchVideoData().then(displayVideo);
 
 		document.body.addEventListener("click", ({ target }) => {
